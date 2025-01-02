@@ -17,16 +17,7 @@ class Post(BaseModel):
     content:str
     published:bool = True
 
-while True:   
-    try:
-        conn=psycopg2.connect(host='localhost',database='fastAPI',user='postgres',password='root', cursor_factory=RealDictCursor)
-        cursor=conn.cursor()
-        print('Database connected successfuly')
-        break
-    except Exception as error:
-        print('connection error')
-        print('Error: ',error)
-        time.sleep(2)
+
 
 my_posts = [{"title":"post 1", "content":"post 1 content","id":1},{"title":"post 2", "content":"post 2 content","id":2}]
 
